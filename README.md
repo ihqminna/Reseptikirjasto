@@ -1,1 +1,9 @@
 # Reseptikirjasto
+
+## Sovelluksen tarkoitus
+
+
+
+## Heroku
+
+
