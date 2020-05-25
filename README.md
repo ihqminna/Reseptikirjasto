@@ -6,4 +6,12 @@ Sovellukseen on kerätty testattuja vegaanisia reseptejä, pääosin henkilökoh
 
 ## Heroku
 
-[Reseptikirjasto](https://dashboard.heroku.com/apps/reseptikirjasto-tsoha)
+[Reseptikirjasto](https://reseptikirjasto-tsoha.herokuapp.com/)
+
+## Ohjelman rakenne
+
+[Luokkakaavio](https://github.com/ihqminna/Reseptikirjasto/blob/master/documentation/Reseptikirjasto.png)
+
+## Käyttötapaukset
+
+[Käyttötapauksia](https://github.com/ihqminna/Reseptikirjasto/blob/master/documentation/user_stories.md)

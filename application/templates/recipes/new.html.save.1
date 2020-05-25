@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<form method="POST" action="{{url_for('recipes_create') }}">
+	<label for="name">Reseptin nimi:</label><br/>
+	<input type="text" name="name"/><br/><br/>
+	<label for="annoksia">Annosten määrä:</label><br/>
+	<input type="number" name="annoksia"/><br/><br/>
+	<label for="aika">Kesto:</label><br/>
+	<input type="number" name="aika"/><br/><br/>
+	<label for="ohje">Ohje:</label><br/>
+	<input type="text" name="ohje" width="48" height="24"/><br/><br/>
+	<input type="submit" value="Lisää resepti"/>
+</form>
+{% endblock %}
