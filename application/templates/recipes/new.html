@@ -10,6 +10,13 @@
 			<td>
 				{{ form.nimi }}
 			</td>
+			<td>
+				<ul>
+					{% for error in form.nimi.errors %}
+					<li>{{ error }}</li>
+					{% endfor %}
+				</ul>
+			</td>
 		</tr>
 		<tr>
 			<td>
@@ -18,8 +25,44 @@
 			<td>
 				{{ form.annoksia }}
 			</td>
+			<td>
+				<ul>
+					{% for error in form.annoksia.errors %}
+					<li>{{ error }}</li>
+					{% endfor %}
+				</ul>
+			</td>
 		</tr>
-
+		<tr>
+			<td>
+				{{ form.aika.label }}
+			</td>
+			<td>
+				{{ form.aika }}
+			</td>
+			<td>
+				<ul>
+					{% for error in form.aika.errors %}
+					<li>{{ error }}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				{{ form.ohje.label }}
+			</td>
+			<td>
+				{{ form.ohje }}
+			</td>
+			<td>
+				<ul>
+					{% for error in form.ohje.errors %}
+					<li>{{ error }}</li>
+					{% endfor %}
+				</ul>
+			</td>
+		</tr>
 		<br>
 		<tr>
 			<td colspan="2">

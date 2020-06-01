@@ -13,10 +13,15 @@ def recipes_form():
 
 @app.route("/recipes/", methods=["POST"])
 def recipes_create():
-	nimi = request.form.get("nimi")
-	annoksia = request.form.get("annoksia")
-	aika = request.form.get("aika")
-	ohje = request.form.get("ohje")
+	form = RecipeForm(request.form)
+
+	if not form.validate():
+		return render_template("recipes/new.html", form = form)
+
+	nimi = form.nimi.data
+	annoksia = form.annoksia.data
+	aika = form.aika.data
+	ohje = form.ohje.data
 
 	r = Recipe(nimi, annoksia, aika, ohje)
 
