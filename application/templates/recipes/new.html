@@ -2,14 +2,29 @@
 
 {% block body %}
 <form method="POST" action="{{url_for('recipes_create') }}">
-	<label for="nimi">Reseptin nimi:</label><br/>
-	<input type="text" name="nimi"/><br/><br/>
-	<label for="annoksia">Annosten määrä:</label><br/>
-	<input type="number" name="annoksia"/><br/><br/>
-	<label for="aika">Kesto (min):</label><br/>
-	<input type="number" name="aika"/><br/><br/>
-	<label for="ohje">Ohje:</label><br/>
-	<input type="text" name="ohje" size="75"/><br/><br/>
-	<input type="submit" value="Lisää resepti"/>
+	<table>
+		<tr>
+			<td>
+				{{ form.nimi.label }}
+			</td>
+			<td>
+				{{ form.nimi }}
+			</td>
+		</tr>
+		<tr>
+			<td>
+				{{ form.annoksia.label }}
+			</td>
+			<td>
+				{{ form.annoksia }}
+			</td>
+		</tr>
+
+		<br>
+		<tr>
+			<td colspan="2">
+				<input type="submit" value="Lisää resepti"/>
+			</td>
+		</tr>
 </form>
 {% endblock %}
