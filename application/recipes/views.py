@@ -1,5 +1,10 @@
-from application import app
-from flask import render_template, request
+from application import app, db
+from flask import render_template, request, redirect, url_for
+from application.recipes.models import Recipe
+
+@app.route("/recipes", methods=["GET"])
+def recipes_index():
+	return render_template("recipes/lists.html", recipes = Recipe.query.all())
 
 @app.route("/recipes/new/")
 def recipes_form():
@@ -17,4 +22,4 @@ def recipes_create():
 	db.session().add(r)
 	db.session().commit()
 
-	return "Kiitos reseptistä!"
+	return redirect(url_for("recipes_index"))

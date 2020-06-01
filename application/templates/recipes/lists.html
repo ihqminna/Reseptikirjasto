@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<table>
+		<tr>
+			<th>Resepti</th>
+			<th>Annoksia</th>
+			<th>Aika (min)</th>
+		</tr>
+		{% for recipe in recipes %}
+		<tr>
+			<td><a href="">{{ recipe.nimi }}</a></td>
+			<td>{{ recipe.annoksia }}</td>
+			<td>{{ recipe.aika }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

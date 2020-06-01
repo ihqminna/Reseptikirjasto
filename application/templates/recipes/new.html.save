@@ -2,8 +2,8 @@
 
 {% block body %}
 <form method="POST" action="{{url_for('recipes_create') }}">
-	<label for="name">Reseptin nimi:</label><br/>
-	<input type="text" name="name"/><br/>
+	<label for="nimi">Reseptin nimi:</label><br/>
+	<input type="text" name="nimi"/><br/>
 	<label for="annoksia">
 	<input type="number" name="annoksia"/><br/>
 	<input type="number" name="aika"/><br/>

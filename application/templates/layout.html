@@ -6,6 +6,12 @@
 	</head>
 
 	<body>
+		<ul>
+			<a href="{{ url_for('recipes_index') }}"><button>Reseptit</button></a>
+			<br>
+			<a href="{{ url_for('recipes_form') }}"><button> Lisää resepti</button></a>	
+			<br>
+
 		{% block body %}
 			<p>
 				Content.
