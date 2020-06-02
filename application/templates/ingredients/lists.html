@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<table>
+		<tr>
+			<th>Raaka-aine</th>
+		</tr>
+		{% for recipe in recipes %}
+		<tr>
+			<td><a href="">{{ ingredient.nimi }}</a></td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}
