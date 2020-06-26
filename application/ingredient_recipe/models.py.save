@@ -1,0 +1,12 @@
+from application import db
+from application.recipes.models import Recipe
+from application.ingredients.models import Ingredient
+
+class Ingredient_recipe(db.Model):
+	nimi = db.Column(db.String, primary_key=True)
+
+	recipes = db.relationship('Recipe', secondary=ingredient_recipe, backref=db.backref('recipes', lazy='dynamic'))
+
+	def __init__(self, nimi):
+		self.nimi = nimi
+
